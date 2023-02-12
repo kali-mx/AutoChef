@@ -16,9 +16,12 @@ https://github.com/gchq/CyberChef-server#Installing
 
 Setting up NODEJS server locally
 
-In CyberChef-server directory
+In CyberChef-server directory:
+
 `npm install`
+
 `npm run`
+
 `node -r esm ./bin/www`       #starts server on port 3000
 
 
