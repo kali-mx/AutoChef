@@ -1,0 +1,34 @@
+{
+  "name": "node-md6",
+  "version": "0.1.0",
+  "description": "MD6 Implementation in Node",
+  "main": "md6.js",
+  "files": [
+    "md6.js"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neo-Desktop/md6.git"
+  },
+  "keywords": [
+    "node",
+    "cryptography",
+    "message",
+    "digest",
+    "6",
+    "md6",
+    "md6js"
+  ],
+  "author": "Amrit Panesar",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/Neo-Desktop/md6/issues"
+  },
+  "homepage": "https://github.com/Neo-Desktop/md6#readme"
+}

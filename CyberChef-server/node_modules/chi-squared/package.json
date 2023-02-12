@@ -1,0 +1,32 @@
+{
+  "name": "chi-squared",
+  "version": "1.1.0",
+  "description": "characteristic functions for chi-squared distributions",
+  "main": "index.js",
+  "dependencies": {
+    "gamma": "^1.0.0"
+  },
+  "devDependencies": {
+    "tape": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/substack/chi-squared.js.git"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "keywords": [
+    "χ²",
+    "chi",
+    "distribution",
+    "probability",
+    "mathematics"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT"
+}
