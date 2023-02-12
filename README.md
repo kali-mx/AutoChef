@@ -12,13 +12,13 @@ Set up Node Server to host the CyberChef API from your local machine
 
 ` cd CyberChef-server`
 
-` node -r .bin/www`
+` node -r esm ./bin/www`
 
 ` cd AutoChef`
 
 ` python3 AutoChef.py`
 
 
-### Bonus: an html version version of CyberChef is provided so you can run your own ad-free copy right from your browser:
+### Bonus: an html version of CyberChef is provided so you can run your own ad-free copy from your browser:
 ` open CyberChef_v9.55.0.html`
 
