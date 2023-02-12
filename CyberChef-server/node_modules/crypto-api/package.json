@@ -1,0 +1,111 @@
+{
+  "name": "crypto-api",
+  "description": "Hashing and encrypting library with no depedencies",
+  "version": "0.8.5",
+  "homepage": "https://github.com/nf404/crypto-api/",
+  "author": {
+    "name": "Aleksandr Mogilnikov",
+    "email": "nf404.name@gmail.com",
+    "url": "https://nf404.name/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nf404/crypto-api.git"
+  },
+  "bugs": {
+    "url": "http://github.com/nf404/crypto-api/issues"
+  },
+  "main": "index",
+  "directories": {
+    "test": "test",
+    "lib": "src",
+    "example": "example"
+  },
+  "files": [
+    "example",
+    "src",
+    "test",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE",
+    "index.js",
+    "index.min.js",
+    "index.min.js.map"
+  ],
+  "scripts": {
+    "test": "nyc mocha --recursive test/test.mjs",
+    "test-dev": "istanbul cover node_modules/mocha/bin/_mocha --dir coverage -- --require babel-core/register  --reporter spec --recursive test/test.mjs",
+    "build": "webpack --progress --hide-modules && mv dist/index.js . && mv dist/index.min.js . && mv dist/index.min.js.map . && esdoc",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "codacy": "codacy-coverage < coverage/lcov.info",
+    "codeclimate": "codeclimate-test-reporter < coverage/lcov.info"
+  },
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "extension": [
+      ".mjs"
+    ],
+    "include": [
+      "src/**/*.mjs",
+      "example/**/*.mjs"
+    ],
+    "reporter": [
+      "lcovonly"
+    ],
+    "report-dir": "./coverage"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.4",
+    "chai": "^4.2.0",
+    "codacy-coverage": "^3.2.0",
+    "codeclimate-test-reporter": "^0.5.0",
+    "coveralls": "^3.0.0",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "html-webpack-externals-plugin": "^3.8.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "unminified-webpack-plugin": "^2.0.0",
+    "webpack": "^4.24.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "keywords": [
+    "hash",
+    "hashes",
+    "md2",
+    "md4",
+    "md5",
+    "ripemd128",
+    "ripemd160",
+    "ripemd256",
+    "ripemd320",
+    "has160",
+    "has-160",
+    "sha0",
+    "sha1",
+    "sha224",
+    "sha256",
+    "sha384",
+    "sha512",
+    "sha512/t",
+    "sha512/224",
+    "sha512/256",
+    "whirlpool",
+    "whirlpool-0",
+    "whirlpool-t",
+    "sm3",
+    "snefru",
+    "hmac"
+  ]
+}
