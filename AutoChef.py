@@ -56,15 +56,18 @@ for recipe in cipher_recipe:
     ready_to_bake = matching_ops + "," + recipe + "]"
     print(ready_to_bake)
     url = "http://localhost:3000/bake"
-    data = {"input": input_value, "recipe": json.loads(ready_to_bake)}  # dictionary
-    response = requests.post(url, headers=headers, json=data)
-    print(response.text)  # string
-    if "string" in response.text:
-        prettified_recipe = (
-            recipe.split(":")[1].replace('"', "").replace("args", "").replace(",", "")
-        )
-        candidates.extend([prettified_recipe, response.text])
-        
+    try:
+        data = {"input": input_value, "recipe": json.loads(ready_to_bake)}  # dictionary
+        print(data)
+        response = requests.post(url, headers=headers, json=data)
+        print(response.text)  # string
+        if "string" in response.text or "iat" in response.text:
+            prettified_recipe = (
+                recipe.split(":")[1].replace('"', "").replace("args", "").replace(",", "")
+            )
+            candidates.extend([prettified_recipe, response.text])
+    except Exception as e:
+        continue    
 print(
     colored(
         """
@@ -81,7 +84,11 @@ print(
 print(
     colored("\n\n\n******************LIKELY SUSPECTS ARE*******************\n", "cyan")
 )
-print(
+
+if magic_recipe == "[]":
+    print("Sorry, I don't know this one, yet. Good luck!")
+else:    
+    print(
     "\033[38;5;83mMagic Function is:", magic_recipe.replace(",", " -->"), " \033[0m\n"
 )  # print("\033[38;5;83m neon green text \033[0m") #ascii version
 for i in range(0, len(candidates) - 1, 2):
