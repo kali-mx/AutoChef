@@ -1,4 +1,5 @@
 import requests, json
+import jwt
 from my_recipes import cipher_recipe
 from termcolor import colored
 #'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', and 'white'
@@ -9,6 +10,14 @@ from termcolor import colored
 # description: a tool that automates cyberchef
 
 input_value = input("Enter your encrypted message: ")
+
+try:
+    decoded_jwt = jwt.decode(input_value, algorithms=['HS256'], verify=False)
+    print(colored("\nDecoded JWT:" + str(decoded_jwt), "green"))
+    exit()
+except Exception as e:
+    print(e)
+    
 
 ###LETS DO MAGIC!!######
 url = "http://localhost:3000/magic"

@@ -3,7 +3,7 @@
 
 # add cipher_recipe from list of strings
 cipher_recipe = (
-  '{\"op\":\"JWT Decode\",\"args\":[]}]}',  
+  '{"op":"JWT Decode","args":[]}',  
   '{"op":"Decode text","args":["UTF-8 (65001)"]}',
   '{"op":"AES Decrypt","args":[{"option":"Hex","string":""},{"option":"Hex","string":""},"CBC","Hex","Raw",{"option":"Hex","string":""},{"option":"Hex","string":""}]}',
   '{"op":"Bcrypt","args":[10]}',
