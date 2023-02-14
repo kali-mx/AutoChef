@@ -29,6 +29,7 @@ cipher_recipe = (
   '{"op":"Vigenère Decode","args":[""]}',
 )
 
+#JSON syntax model
 recipe_value = [
     {"op": "From Base32", "args": ["A-Z2-7=", True]},
     {"op": "From Base64", "args": ["A-Za-z0-9+/=", True, False]},
