@@ -8,15 +8,9 @@
 git clone https://github.com/kali-mx/AutoChef.git 
 `
 
-Set up Node Server to host the CyberChef API from your local machine
+Set up Node Server to host the CyberChef API locally
 
 ` cd CyberChef-server`
-
-https://github.com/gchq/CyberChef-server#Installing
-
-Setting up NODEJS server locally
-
-In CyberChef-server directory:
 
 `npm install`
 
@@ -24,6 +18,7 @@ In CyberChef-server directory:
 
 `node -r esm ./bin/www`       #starts server on port 3000
 
+In a new Terminal:
 
 ` cd AutoChef`
 
@@ -33,3 +28,5 @@ In CyberChef-server directory:
 #### Bonus: an html version of CyberChef is provided so you can run your own ad-free copy from your browser locally:
 ` open CyberChef_v9.55.0.html`
 
+
+Source: https://github.com/gchq/CyberChef-server#Installing
